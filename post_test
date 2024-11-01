@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>latihan 01</title>
+    </head>
+    <body>
+        <font size="7">Fakultas Ilmu Komputer</font> <br>
+            <font size="5">Universitas Kuningan</font> <br>
+                <font size="3">
+                    Alamat : Jl. Pramuka No. 67, Purwawinangun, 
+                    Kec. Kuningan, Kabupaten Kuningan, Jawa Barat 45512</font>
+                    <hr size="3">
+                    <main>
+                        <div>
+                            <article>
+                                <img src="../image/fkom.jpg" alt="" width="150">
+                                <div><b>VISI</b></div>
+                                Terwujudnya program studi sistem informasi sebagai program studi yang
+                                handal dan unggul
+                                dalam penyelenggaraan Tri Darma Perguruan Tinggi, unggul di bidang
+                                rekayasa sistem informasi di Wilayah Jawa Barat pada tahun 2032.
+                                <div><b><i>PROFIL LULUSAN & PILIHAN KARIR</i></b></div>
+                                System Analyst, Data Analyst, Chief Information Officer (CIO), Software
+                                Quality Assurance.
+                                <div><b><u>KEGIATAN MBKM</u></b></div>
+                                <UL>
+                                    <LI>Magang</LI>
+                                    <li>Studi Independen</li>
+                                    <li>Bangkit Academy</li>
+                                    <li>Pertukaran Mahasiswa Merdeka (PMM) Nusantara</li>
+                                    <li>Internasioanl Credit Transfer(ICT)</li>
+                                </UL>
+                                <div><b><u><i>PROGRAM UNGGULAN</i></u></b></div>
+                                <ul type="square">
+                                    <li>Pertukaran Mahasiswa ke University Utara Malaysia (UUM)</li>
+                                    <li>Praktisi/Dosen Kompetensi dari Universitas lain</li>
+                                    </ul>
+                                    <div><strong>PRESTASI MAHASISWA</strong></div>
+                                    <ul type="circle">
+                                    <li>Juara 1 lomba Desain Cindramata 2018</li>
+                                    <li>Juara Favorit lomba poster STIKKU 2017</li>
+                                    <li>Mahasiswa Berprestasi UNIKU 2022</li>
+                                    <li>Duta Putra Sosial Kuningan 2022</li>
+                                    <li>Juara Lomba LLDIKTI Konsep Garapan Terbaik Tingkat Jabar-Banten
+                                    2022</li>
+                                    <li>PPK ORMAWA</li>
+                                    </ul>
+                                    <div>SERTIFIKASI</div>
+                                    <img SRC="../image/bnsp.png" alt="">
+
+                                    <div><b><i>PROGRAM STUDI</i></b></div>
+                                    <ul>
+                                        <li>Sistem Informasi S1</li>
+                                        <p>Terakreditasi B</p>
+                                        <img src="../image/logo.png" alt="" width="150">
+                                        <div><b>VISI</b></div>
+                                        "Terwujudnya program studi Sistem Informasi sebagai program studi 
+                                        yang unggul dan handal dalam penyelenggaraaan Tri Darma Perguruan 
+                                        Tinggi unggul di bidang rekayas asistem informasi di Wilayah Jawa Barat pada tahun 2032"
+                                        <div><b>MISI</b></div>
+                                        <ol type="1">
+                                            <li>Menyelenggarakan pendidikan berbasis system informasi sesuai dengan 
+                                                dinamika kebutuhan masyarakat.</li>
+                                                <li>Melaksanakan penelitian dan pengabdian pad amasyarakat dalam bidang system informasi.</li>
+                                                <li>Mengembangkan kehidupan akademik yang sehat sesuai dengan nilai-nilai dan norma-norma 
+                                                    yang berkembang di dunia akademik</li>
+                                                    <li>Menjalin kerjasama secara institusional dengan lembaga lain di bidang system informasi 
+                                                        untuk pengembangan dan pemberdayaan program studi.</li>
+                                                        <li>Ikut serta memberdayakan masyarakat.</li>
+                                        <div><b>Kompetensi Program Studi</b></div>
+                                        <ol type="a">
+                                             <li>Memperbaiki proses-proses organisasional.</li>
+                                            <li>Memanfaatkan peluang yang tercipta dari inovasi teknologi.</li>
+                                            <li>Memahami dan mendokumentasikan kebutuhan-kebutuhan informasi.</li>
+                                            <li>Merancang dan mengelola arsitektur informasi organisasi (enterprise architecture).</li>
+                                        </ul>
+                                        
+                                        <ul>
+                                        <li>Teknik Informatika S1</li>
+                                        <p>Terakreditasi B</p>
+                                        <img src="../image/ti.png" alt="">
+                                        <div><b>VISI</b></div>
+                                        "Terwujudnya program studi yang handal dan unggul dibidang teknologi 
+                                        informasi yang memiliki 
+                                        standar kompetensi dan menghasilkan tenaga-tenaga ahli IT yang cerdas dan berbudi luhur di 
+                                        wilayah Jawa Barat pada tahun 2032"
+                            <div><b>MISI</b></div>
+                                        <ol type="1">
+                                            <li>Menyelenggarakan pendidikan bermutu tinggi dibidang Teknik Informatika bagi masyarakat
+                                                 sebagai sarana untuk menghasilkan lulusan yang bermoral, berkualitas, professional, 
+                                                 kompeten, sesuai dengan kebutuhan standar industry, profesi dan perkembangan 
+                                                 ilmu pengetahuan dan teknologi saat ini dan yang akan datang.</li>
+                                                 <li>Memenuhi kebutuhan masyarakat melalui pengenalan, pengalihan dan penyebaran ilmu pengetahuan 
+                                                    dan teknologi yang relevan dengan ilmu teknik informatika untuk mencapai kualitas standar 
+                                                    program studi dengan berfokus pada integritasi teknologi informasi dalam setiap aspek kehidupan manusia.</li>
+                                                    <li>Menemukan, mengembangkan dan menciptakan karya di bidang informatika serta menyebarkan ilmu
+                                                        pengetahuan dan teknologi demi kepekaan dan kepedulian terhadap kehidupan masyarakat. 
+                                                    </li>
+                                                    <li>Menumbuhkan budaya diskusi dlam pelaksanaan Tri Dharma perguruan Tinggi</li>
+                                                    <div><b>Kompetensi Program studi</b></div>
+                                                    <ol type="a">
+                                                        <li> Kemampuan berkomunikasi yang efektif dalam bahasa inggris Lisan maupun Tulisan.</li>
+                                                        <li>Kemampuan untuk memanfaatkan teknik, keahlian dan peralatan atau tools modern yang diperlukan 
+                                                            untuk menyelesaikan tugas dan tanggungjawabnya.</li>
+                                                            <li>Mengimplementasikan rancangan system secara efisien dan efektif di dalam sebuah software 
+                                                                yang dirancang untuk organisasi atau tatanan komunitas lainnya sehingga mendukung tercapainya 
+                                                                visi dan misi organisasi yang bersangkutan.</li>
+                                                                <li>Kemampuan dan kapasitas pengetahuan yang cukup sebagai ahli teknik profesional untuk menjalankan
+                                                                     tanggungjawab social, budaya, lingkungan, global, dan bisnis, serta peduli terhadap prinsip dan
+                                                                      kebutuhan pembangunan berkelanjutan.</li>
+                                                    </ol>
+                                                    </ol>
+                                                    </ul>
+
+                                                    <ul>
+                                                        <li>Desain Komunikasi Visual S1</li>
+                                                        <p>Terakrediatsi B</p>
+                                                        <img src="../image/dkv.png" alt="">
+                                                        <div><b>VISI</b></div>
+                                                        "Menjadi program studi desain komunikasi visual yang unggul dalam bidang industri multimedia, periklanan 
+                                                        dan grafis yang berbasis teknologi iformasi dan memiliki komitmen yang tinggi terhadap pemberdayaan 
+                                                        masyarakat tahun 2032"
+                                                        <div><b>MISI</b></div>
+                                                        <ol type="1">
+                                                            <li>Mengembangkan dan mengimplementasikan pendidikan Desain Komunikasi Visual berbasis teknologi 
+                                                                informasi di bidang industri multimedia, periklanan dan desain grafis, yang kreatif serta 
+                                                                dapat terintegrasi secara keilmuan dengan disiplin ilmu lain.</li>
+                                                                <li>Mengembangkan penelitian dan pengabdian masyarakat, sebagai bagian dari pengembangan keilmuan 
+                                                                    yang mempunyai nilai kelaruan yang bermanfaat bagi kebutuhan industri dan masyarakat</li>
+                                                                    <div><b>Tujuan Program Studi DKV</b></div>
+                                                                    <ol type="a">
+                                                                        <li>Menghasilkan lulusan (Sarjana Desain) yang kreatif dan berjiwa entreupreneur.</li>
+                                                                        <li>Mengeksplorasi dan memecahkan permasalahan di bidang komunikasi visual dengan 
+                                                                            penekanan pada sisi inovasi dan integrasi keilmuan dengan menghasilkan karya penelitian dan produk inovasi.</li>
+                                                                    </ol>
+                                                        </ol>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>Manajemen informatika D3</li>
+                                                        <p> Proses Terakreditasi B</p>
+                                                        <img src="../image/mi.jpg" alt="" width="150">
+                                                        <div><b>VISI</b></div>
+                                                        "Mewujudkan program studi yang unggul dalam bidang teknologi informasi dan komunikasi dan bermutu 
+                                                        berbasis entrepeunership yang diseleraskan dengan perkembangan teknologi informasi dan komunikasi 
+                                                        serta memiliki komitmen yang tinggi terhadap pemberdayaan masyarakat pada tahun 2032"
+                                                        <div><b>MISI</b></div>
+                                                        <ol type="1">
+                                                            <li>Menyelenggarakan pendidikan, penelitian, dan pengabdian pada masyarakat khususnya dalam penerapan teknologi informasi.</li>
+                                                            <li>Menyelenggarakan riset-riset ilmiah dibidang teknologi informasi pada dunia pendidikan, industri, bisnis dan
+                                                            akuntansi yang senantiasa berkembang dengan sangat pesat.</li>
+                                                            <li>Melayani, memandu, dan menyatu dengan masyarakat dalam upaya ikut serta mewujudkan masyarakat baru Indonesia yang 
+                                                                berwawasan luas, dinamis, dan modern.</li>
+                                                                <li>Memberi bekal pengetahuan teori dan praktek kepada peserta didik agar memiliki kompetensi yang tinggi 
+                                                                    dalam bidang pemrograman-pemrograman aplikasi untuk pemanfaatn sistem informasi. </li>
+                                                                    <div><b>Tujuan Program Studi MI</b></div>
+                                                                    <ol type="a">
+                                                                        <li>Mampu bekerja sama, berkomunikasi, dan berinovatif dalam.pekerjaannya.</li>
+                                                                        <li>Mampu melakukan proses evaluasi diri terhadap kelompok kerja yang berada dibawah tanggung jawabnya, 
+                                                                            dan mengelola pengembangan kompetensi kerja secara mandiri.</li>
+                                                                            <li>Membantu Manajemen Teknologi Informasi dalam merancang dan membangun jaringan.</li>
+                                                                            <li>Mampu melakukan troubleshooting untuk menentukan kasus dan memperbaiki error serta memutuskan apa
+                                                                                yang harus dilakukan. </li>
+                                                                    </ol>
+                                                        </ol>
+
+
+                                                    </ul>
+                                    
+
+                            </article>
+                        </div>
+                    </main>
+                    
+
+
+
+    </body>
+</html>
