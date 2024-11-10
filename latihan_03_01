@@ -1,0 +1,25 @@
+<!--index html -->
+<!DOCTIPE html>
+<html lang="en">
+    <head>
+        <meta charseat="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Praktikum CSS</title>
+        <!--Internal CSS-->
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+            }
+            h1{
+                color:blue;
+            }
+        </style>
+        <!--Eksternal CSS-->
+        <link rel="stylesheet" herf="style.css">
+    </head>
+    <body>
+        <h1>Ini adalah heading</h1>
+        <p style="color:red;">Ini adalah paragraf dengan Inline CSS.</p>
+        <div class="kotak">Kotak dengan CSS Eksternal</div>
+    </body>
+</html>
