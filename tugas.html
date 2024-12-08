@@ -1,96 +1,164 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Foto Alumni UNIKU</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Link ke jQuery -->
+    <title>Lowongan Kerja - Portal Alumni</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* CSS untuk Galeri */
+        /* Tema Warna Pink */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 20px;
+            background-color: #f8d7e3;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Menampilkan gambar dalam 3 kolom */
-            gap: 20px;
-            justify-items: center;
+        .navbar {
+            background-color: #e83e8c;
         }
 
-        .gallery-item {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            display: none; /* Sembunyikan gambar saat pertama kali dimuat */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: white !important;
         }
 
-        .gallery-item:hover {
-            transform: scale(1.05); /* Efek zoom saat hover */
+        .navbar .nav-link:hover {
+            color: #ff69b4 !important;
         }
 
-        /* Modal Styles */
-        .modal {
-            display: none; /* Sembunyikan modal secara default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            display: flex;
+        .jumbotron {
+            background-color: #f1c6d9;
+            color: #e83e8c;
         }
 
-        .modal-content {
-            max-width: 80%;
-            max-height: 80%;
-            margin: auto;
+        .card {
+            border: 1px solid #f1c6d9;
         }
 
-        .modal img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
+        .card-title {
+            color: #e83e8c;
         }
 
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer;
+        .card-body {
+            background-color: #f8d7e3;
+        }
+
+        .btn-primary {
+            background-color: #e83e8c;
+            border-color: #e83e8c;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff69b4;
+            border-color: #ff69b4;
+        }
+
+        footer {
+            background-color: #e83e8c;
+            color: white;
+        }
+
+        footer p {
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="gallery">
-        <img src="kendal.jpg" alt="Alumni 1" class="gallery-item">
-        <img src="alumni.jpg" alt="Alumni 2" class="gallery-item">
-        <img src="foto3.jpg" alt="Alumni 3" class="gallery-item">
-        <img src="foto4.jpg" alt="Alumni 4" class="gallery-item">
-        <img src="foto5.jpg" alt="Alumni 5" class="gallery-item">
-    </div>
-
-    <!-- Modal untuk menampilkan gambar dalam ukuran penuh -->
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <div class="modal-content">
-            <img id="modal-img" src="" alt="Gambar Penuh">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Portal Alumni</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" 
+        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tentang Kami</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Lowongan Kerja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontak</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <script src="script_tugas.js"></script> <!-- Link ke file JavaScript -->
+    <!-- Jumbotron -->
+    <header class="jumbotron text-center">
+        <h1 class="display-4">Lowongan Kerja Terbaru</h1>
+        <p class="lead">Temukan peluang karir terbaru untuk alumni di berbagai perusahaan.</p>
+    </header>
+
+    <!-- Daftar Lowongan Kerja -->
+    <section class="container my-5">
+        <h2>Daftar Lowongan Kerja</h2>
+        <div class="row">
+
+            <!-- Lowongan 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="web.jpg" class="card-img-top" alt="Lowongan 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Junior Web Developer</h5>
+                        <p><strong>Perusahaan:</strong> PT. Teknologi Canggih</p>
+                        <p><strong>Deskripsi:</strong> Kami mencari pengembang web pemula yang dapat berkontribusi dalam proyek-proyek pengembangan web.</p>
+                        <p><strong>Kualifikasi:</strong> Pengalaman dalam HTML, CSS, dan JavaScript. Bersemangat untuk belajar dan berkembang.</p>
+                        <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                        <p><strong>Batas Lamaran:</strong> 15 Januari 2025</p>
+                        <a href="#" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lowongan 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="data analis.jpg" class="card-img-top" alt="Lowongan 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Analyst</h5>
+                        <p><strong>Perusahaan:</strong> PT. Data Solusi</p>
+                        <p><strong>Deskripsi:</strong> Kami membutuhkan analis data untuk mengolah dan menganalisis data bisnis yang kompleks.</p>
+                        <p><strong>Kualifikasi:</strong> Mahir dalam SQL, Excel, atau alat analisis data lainnya. Pengalaman 1-2 tahun.</p>
+                        <p><strong>Lokasi:</strong> Bandung, Indonesia</p>
+                        <p><strong>Batas Lamaran:</strong> 20 Januari 2025</p>
+                        <a href="#" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lowongan 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="3.jpg" class="card-img-top" alt="Lowongan 3">
+                    <div class="card-body">
+                        <h5 class="card-title">UI/UX Designer</h5>
+                        <p><strong>Perusahaan:</strong> PT. Desain Kreatif</p>
+                        <p><strong>Deskripsi:</strong> Mencari seorang desainer UI/UX untuk mendesain antarmuka yang intuitif dan menarik.</p>
+                        <p><strong>Kualifikasi:</strong> Pengalaman dalam menggunakan alat desain seperti Figma atau Adobe XD.</p>
+                        <p><strong>Lokasi:</strong> Yogyakarta, Indonesia</p>
+                        <p><strong>Batas Lamaran:</strong> 5 Februari 2025</p>
+                        <a href="#" class="btn btn-primary">Lamar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Program Studi Sistem Informasi, Universitas Kuningan. Hak cipta dilindungi.</p>
+    </footer>
+
+    <!-- Bootstrap JS & Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
