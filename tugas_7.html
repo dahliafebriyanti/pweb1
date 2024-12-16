@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lowongan Kerja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center">Manajemen Lowongan Kerja</h1>
+
+    <!-- Form Tambah/Update -->
+    <form id="jobForm" class="my-4">
+      <input type="hidden" id="jobId">
+      <div class="mb-3">
+        <label for="jobTitle" class="form-label">Judul</label>
+        <input type="text" class="form-control" id="jobTitle" required>
+      </div>
+      <div class="mb-3">
+        <label for="jobDescription" class="form-label">Deskripsi</label>
+        <textarea class="form-control" id="jobDescription" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="jobLocation" class="form-label">Lokasi</label>
+        <input type="text" class="form-control" id="jobLocation" required>
+      </div>
+      <div class="mb-3">
+        <label for="jobSalary" class="form-label">Gaji</label>
+        <input type="number" class="form-control" id="jobSalary" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Simpan</button>
+    </form>
+
+    <!-- Daftar Lowongan -->
+    <h2 class="my-4">Daftar Lowongan Kerja</h2>
+    <table class="table table-bordered" id="jobTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Judul</th>
+          <th>Deskripsi</th>
+          <th>Lokasi</th>
+          <th>Gaji</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    const apiUrl = 'https://script.google.com/macros/s/AKfycbw-zOzCOF9uHkSlwVOeugIn1jI2nQgK_VwYpCs0d0iJvqg_1PhredbZuwuwBuHc3cIT/exec';
+
+    // Event Listener untuk menambah atau memperbarui lowongan
+    document.getElementById('jobForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const id = document.getElementById('jobId').value;
+      const title = document.getElementById('jobTitle').value;
+      const description = document.getElementById('jobDescription').value;
+      const location = document.getElementById('jobLocation').value;
+      const salary = document.getElementById('jobSalary').value;
+
+      const action = id ? "updateJob" : "addJob";  // Menentukan action berdasarkan ada tidaknya ID
+      const params = new URLSearchParams({ action, id, title, description, location, salary });
+
+      // Mengirim request ke API
+      const response = await fetch(`${apiUrl}?${params}`);
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        alert("Berhasil disimpan!");
+        loadJobs(); // Memuat ulang data lowongan
+        document.getElementById('jobForm').reset();
+      } else {
+        alert("Gagal menyimpan data!");
+      }
+    });
+
+    // Fungsi untuk memuat semua lowongan dari Google Sheets
+    async function loadJobs() {
+      const response = await fetch(`${apiUrl}?action=searchJob&query=`);
+      const result = await response.json();
+      const tbody = document.querySelector('#jobTable tbody');
+      tbody.innerHTML = ''; // Membersihkan tabel sebelum menambahkan data baru
+
+      result.results.forEach(job => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${job[0]}</td>
+          <td>${job[1]}</td>
+          <td>${job[2]}</td>
+          <td>${job[3]}</td>
+          <td>${job[4]}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" onclick="editJob(${job[0]})">Edit</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteJob(${job[0]})">Hapus</button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Fungsi untuk menghapus lowongan
+    async function deleteJob(id) {
+      if (!confirm("Yakin ingin menghapus data ini?")) return;
+
+      const response = await fetch(`${apiUrl}?action=deleteJob&id=${id}`);
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        alert("Berhasil dihapus!");
+        loadJobs(); // Memuat ulang data lowongan
+      } else {
+        alert("Gagal menghapus data!");
+      }
+    }
+
+    // Fungsi untuk mengedit lowongan
+    async function editJob(id) {
+      const response = await fetch(`${apiUrl}?action=searchJob&query=${id}`);
+      const result = await response.json();
+
+      const job = result.results.find(job => job[0] == id);
+      if (!job) return;
+
+      document.getElementById('jobId').value = job[0];
+      document.getElementById('jobTitle').value = job[1];
+      document.getElementById('jobDescription').value = job[2];
+      document.getElementById('jobLocation').value = job[3];
+      document.getElementById('jobSalary').value = job[4];
+    }
+
+    // Memuat data lowongan saat halaman dimuat
+    loadJobs();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
