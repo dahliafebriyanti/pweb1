@@ -1,32 +1,45 @@
-$(document).ready(function () {
-    //1. Dasar selektor
-    $("#header").css("text-align", "center"); //Mengubah align text pada header
-    $("li").css("margin", "5px"); // Memberi margin pada semua <li>
-  
-    // 2. Selektor Atribut
-    $('img[alt="Alumni Photo 1"]').css("border", "2px solid red"); // Mengubah border pada gambar dengan alt="Alumni Photo 1"
-  
-    // 3. Selektor Hirarki
-    $("#alumni List li").css("font-size", "18px"); // Mengubah font size pada semua <li> di dalam #alumniList
-  
-    // 4. Selektor Filter
-    $("li:even").css("color", "blue"); // Mengubah warna teks pada elemen <li> genap
-    $(".featured").addClass("highlight"); // Menambahkan class highlight pada elemen dengan class featured
-  
-    // Event Handling untuk Galeri Foto
-    $(".gallery img").on("click", function () {
-      var src = $(this).attr("src");
-      $("#modallmage").attr("src", src);
-      $("#myModal").fadeIn();
+javascript
+$(document).ready(function() {
+    // Menambahkan alumni
+    $("#formAlumni").submit(function(e) {
+        e.preventDefault();
+
+        var nama = $("#nama").val();
+        var tahun_kelulusan = $("#tahun_kelulusan").val();
+        var jurusan = $("#jurusan").val();
+        var status = $("#status").val();
+
+        // Kirim data ke server menggunakan AJAX
+        $.ajax({
+            url: 'add_alumni.php',
+            type: 'POST',
+            data: {
+                nama: nama,
+                tahun_kelulusan: tahun_kelulusan,
+                jurusan: jurusan,
+                status: status
+            },
+            success: function(response) {
+                alert('Alumni berhasil ditambahkan!');
+                location.reload(); // Reload halaman untuk menampilkan data terbaru
+            }
+        });
     });
-  
-    $(".modal.close").on("click", function () {
-      $("#myModal").fadeOut();
+
+    // Menghapus alumni
+    $(".delete-btn").click(function() {
+        var id = $(this).data("id");
+
+        if (confirm("Apakah Anda yakin ingin menghapus alumni ini?")) {
+            $.ajax({
+                url: 'delete_alumni.php',
+                type: 'POST',
+                data: { id: id },
+                success: function(response) {
+                    alert('Alumni berhasil dihapus!');
+                    $("#alumni_" + id).remove(); // Hapus baris alumni dari tabel
+                }
+            });
+        }
     });
-  
-    $(window).on("click", function (event) {
-      if ($(event.target).is("#myModal")) {
-        $("#myModal").fadeOut();
-      }
-    });
-  });
+});
